@@ -6,7 +6,7 @@ The course will consider the algorithms that form the basis of modern mobile rob
 ## Course Content
 | Week | Lecture Content | Seminar Content | Materials |
 | --- | --- | --- | --- |
-|01|Introduction to Robotics| Intro to ROS, basic concepts, first launch | |
+|01|Introduction to Robotics| Intro to ROS, basic concepts, first launch | [Week 1 materilas](https://github.com/girafe-ai/msai-robotics/tree/master/week01_introduction) |
 |02|Localization| ROS filesystem, package creation, comuunication types | |
 |03|Kinematics. Probabilistic motion models| Services, actions, parameters, roslaunch | |
 |04|Probabilistic observation models| Namespaces in ROS, time, debugging and visualization tools 
