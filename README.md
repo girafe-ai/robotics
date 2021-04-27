@@ -12,4 +12,4 @@ The course will consider the algorithms that form the basis of modern mobile rob
 |04|Probabilistic observation models| Namespaces in ROS, time, debugging and visualization tools | [Week 4 materilas](https://github.com/girafe-ai/msai-robotics/tree/master/week04_observation_models) | 
 |05|Mapping|| [Week 5 materilas](https://github.com/girafe-ai/msai-robotics/tree/master/week05_mapping) |
 |06|Path and Motion Planning|| [Week 6 materilas](https://github.com/girafe-ai/msai-robotics/tree/master/week06_path_planning) |
-|07|Control algorithms|
+|07|Control algorithms|| [Week 7 materilas](https://github.com/girafe-ai/msai-robotics/tree/master/week07_control_algorithms) |
