@@ -1,0 +1,6 @@
+<launch>
+    <param name="/window_size" value="10"/>
+
+    <node name="generator" pkg="second_package" type="signal_generator_node.py" />
+    <node name="filter" pkg="second_package" type="signal_filter_node.py" />
+</launch>
