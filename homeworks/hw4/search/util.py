@@ -244,12 +244,12 @@ class Counter(dict):
     all keys are defaulted to have value 0.  Using a dictionary:
 
     a = {}
-    print a['test']
+    print(a['test'])
 
     would give an error, while the Counter class analogue:
 
     >>> a = Counter()
-    >>> print a['test']
+    >>> print(a['test'])
     0
 
     returns the default 0 value. Note that to reference a key
@@ -258,14 +258,14 @@ class Counter(dict):
 
     >>> a = Counter()
     >>> a['test'] = 2
-    >>> print a['test']
+    >>> print(a['test'])
     2
 
     This is very useful for counting things without initializing their counts,
     see for example:
 
     >>> a['blah'] += 1
-    >>> print a['blah']
+    >>> print(a['blah'])
     1
 
     The counter also includes additional functionality useful in implementing
@@ -451,7 +451,7 @@ def raiseNotDefined():
     line = inspect.stack()[1][2]
     method = inspect.stack()[1][3]
 
-    print "*** Method not implemented: %s at line %s of %s" % (method, line, fileName)
+    print("*** Method not implemented: %s at line %s of %s" % (method, line, fileName))
     sys.exit(1)
 
 def normalize(vectorOrCounter):
@@ -595,7 +595,7 @@ def pause():
     """
     Pauses the output stream awaiting user feedback.
     """
-    print "<Press enter/return to continue>"
+    print("<Press enter/return to continue>")
     raw_input()
 
 

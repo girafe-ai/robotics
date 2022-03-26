@@ -139,7 +139,7 @@ def _destroy_window(event=None):
 #    global _root_window
 #    _root_window.destroy()
 #    _root_window = None
-    #print "DESTROY"
+    #print("DESTROY")
 
 def end_graphics():
     global _root_window, _canvas, _mouse_enabled
@@ -149,7 +149,7 @@ def end_graphics():
             if _root_window != None:
                 _root_window.destroy()
         except SystemExit, e:
-            print 'Ending graphics raised an exception:', e
+            print('Ending graphics raised an exception:', e)
     finally:
         _root_window = None
         _canvas = None
@@ -260,7 +260,7 @@ def _keypress(event):
     #remap_arrows(event)
     _keysdown[event.keysym] = 1
     _keyswaiting[event.keysym] = 1
-#    print event.char, event.keycode
+#    print(event.char, event.keycode)
     _got_release = None
 
 def _keyrelease(event):

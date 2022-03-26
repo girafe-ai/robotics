@@ -4,7 +4,7 @@
 # educational purposes provided that (1) you do not distribute or publish
 # solutions, (2) you retain this notice, and (3) you provide clear
 # attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-# 
+#
 # Attribution Information: The Pacman AI projects were developed at UC Berkeley.
 # The core projects and autograders were primarily created by John DeNero
 # (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
@@ -17,6 +17,7 @@ import random
 
 # Module Classes
 
+
 class EightPuzzleState:
     """
     The Eight Puzzle is described in the course textbook on
@@ -27,7 +28,7 @@ class EightPuzzleState:
     the EightPuzzleSearchProblem class.
     """
 
-    def __init__( self, numbers ):
+    def __init__(self, numbers):
         """
           Constructs a new eight puzzle from an ordering of numbers.
 
@@ -50,16 +51,16 @@ class EightPuzzleState:
         list (a list of lists) 'cells'.
         """
         self.cells = []
-        numbers = numbers[:] # Make a copy so as not to cause side-effects.
+        numbers = numbers[:]  # Make a copy so as not to cause side-effects.
         numbers.reverse()
-        for row in range( 3 ):
-            self.cells.append( [] )
-            for col in range( 3 ):
-                self.cells[row].append( numbers.pop() )
+        for row in range(3):
+            self.cells.append([])
+            for col in range(3):
+                self.cells[row].append(numbers.pop())
                 if self.cells[row][col] == 0:
                     self.blankLocation = row, col
 
-    def isGoal( self ):
+    def isGoal(self):
         """
           Checks to see if the puzzle is in its goal state.
 
@@ -78,14 +79,14 @@ class EightPuzzleState:
         False
         """
         current = 0
-        for row in range( 3 ):
-            for col in range( 3 ):
+        for row in range(3):
+            for col in range(3):
                 if current != self.cells[row][col]:
                     return False
                 current += 1
         return True
 
-    def legalMoves( self ):
+    def legalMoves(self):
         """
           Returns a list of legal moves from the current state.
 
@@ -97,14 +98,14 @@ class EightPuzzleState:
         """
         moves = []
         row, col = self.blankLocation
-        if(row != 0):
-            moves.append('up')
-        if(row != 2):
-            moves.append('down')
-        if(col != 0):
-            moves.append('left')
-        if(col != 2):
-            moves.append('right')
+        if row != 0:
+            moves.append("up")
+        if row != 2:
+            moves.append("down")
+        if col != 0:
+            moves.append("left")
+        if col != 2:
+            moves.append("right")
         return moves
 
     def result(self, move):
@@ -120,16 +121,16 @@ class EightPuzzleState:
         it returns a new object.
         """
         row, col = self.blankLocation
-        if(move == 'up'):
+        if move == "up":
             newrow = row - 1
             newcol = col
-        elif(move == 'down'):
+        elif move == "down":
             newrow = row + 1
             newcol = col
-        elif(move == 'left'):
+        elif move == "left":
             newrow = row
             newcol = col - 1
-        elif(move == 'right'):
+        elif move == "right":
             newrow = row
             newcol = col + 1
         else:
@@ -155,7 +156,7 @@ class EightPuzzleState:
               EightPuzzleState([1, 0, 2, 3, 4, 5, 6, 7, 8]).result('left')
           True
         """
-        for row in range( 3 ):
+        for row in range(3):
             if self.cells[row] != other.cells[row]:
                 return False
         return True
@@ -165,47 +166,50 @@ class EightPuzzleState:
 
     def __getAsciiString(self):
         """
-          Returns a display string for the maze
+        Returns a display string for the maze
         """
         lines = []
-        horizontalLine = ('-' * (13))
+        horizontalLine = "-" * (13)
         lines.append(horizontalLine)
         for row in self.cells:
-            rowLine = '|'
+            rowLine = "|"
             for col in row:
                 if col == 0:
-                    col = ' '
-                rowLine = rowLine + ' ' + col.__str__() + ' |'
+                    col = " "
+                rowLine = rowLine + " " + col.__str__() + " |"
             lines.append(rowLine)
             lines.append(horizontalLine)
-        return '\n'.join(lines)
+        return "\n".join(lines)
 
     def __str__(self):
         return self.__getAsciiString()
 
+
 # TODO: Implement The methods in this class
+
 
 class EightPuzzleSearchProblem(search.SearchProblem):
     """
-      Implementation of a SearchProblem for the  Eight Puzzle domain
+    Implementation of a SearchProblem for the  Eight Puzzle domain
 
-      Each state is represented by an instance of an eightPuzzle.
+    Each state is represented by an instance of an eightPuzzle.
     """
-    def __init__(self,puzzle):
+
+    def __init__(self, puzzle):
         "Creates a new EightPuzzleSearchProblem which stores search information."
         self.puzzle = puzzle
 
     def getStartState(self):
         return puzzle
 
-    def isGoalState(self,state):
+    def isGoalState(self, state):
         return state.isGoal()
 
-    def getSuccessors(self,state):
+    def getSuccessors(self, state):
         """
-          Returns list of (successor, action, stepCost) pairs where
-          each succesor is either left, right, up, or down
-          from the original state and the cost is 1.0 for each
+        Returns list of (successor, action, stepCost) pairs where
+        each succesor is either left, right, up, or down
+        from the original state and the cost is 1.0 for each
         """
         succ = []
         for a in state.legalMoves():
@@ -221,61 +225,67 @@ class EightPuzzleSearchProblem(search.SearchProblem):
         """
         return len(actions)
 
-EIGHT_PUZZLE_DATA = [[1, 0, 2, 3, 4, 5, 6, 7, 8],
-                     [1, 7, 8, 2, 3, 4, 5, 6, 0],
-                     [4, 3, 2, 7, 0, 5, 1, 6, 8],
-                     [5, 1, 3, 4, 0, 2, 6, 7, 8],
-                     [1, 2, 5, 7, 6, 8, 0, 4, 3],
-                     [0, 3, 1, 6, 8, 2, 7, 5, 4]]
+
+EIGHT_PUZZLE_DATA = [
+    [1, 0, 2, 3, 4, 5, 6, 7, 8],
+    [1, 7, 8, 2, 3, 4, 5, 6, 0],
+    [4, 3, 2, 7, 0, 5, 1, 6, 8],
+    [5, 1, 3, 4, 0, 2, 6, 7, 8],
+    [1, 2, 5, 7, 6, 8, 0, 4, 3],
+    [0, 3, 1, 6, 8, 2, 7, 5, 4],
+]
+
 
 def loadEightPuzzle(puzzleNumber):
     """
-      puzzleNumber: The number of the eight puzzle to load.
+    puzzleNumber: The number of the eight puzzle to load.
 
-      Returns an eight puzzle object generated from one of the
-      provided puzzles in EIGHT_PUZZLE_DATA.
+    Returns an eight puzzle object generated from one of the
+    provided puzzles in EIGHT_PUZZLE_DATA.
 
-      puzzleNumber can range from 0 to 5.
+    puzzleNumber can range from 0 to 5.
 
-      >>> print loadEightPuzzle(0)
-      -------------
-      | 1 |   | 2 |
-      -------------
-      | 3 | 4 | 5 |
-      -------------
-      | 6 | 7 | 8 |
-      -------------
+    >>> print(loadEightPuzzle(0))
+    -------------
+    | 1 |   | 2 |
+    -------------
+    | 3 | 4 | 5 |
+    -------------
+    | 6 | 7 | 8 |
+    -------------
     """
     return EightPuzzleState(EIGHT_PUZZLE_DATA[puzzleNumber])
 
+
 def createRandomEightPuzzle(moves=100):
     """
-      moves: number of random moves to apply
+    moves: number of random moves to apply
 
-      Creates a random eight puzzle by applying
-      a series of 'moves' random moves to a solved
-      puzzle.
+    Creates a random eight puzzle by applying
+    a series of 'moves' random moves to a solved
+    puzzle.
     """
-    puzzle = EightPuzzleState([0,1,2,3,4,5,6,7,8])
+    puzzle = EightPuzzleState([0, 1, 2, 3, 4, 5, 6, 7, 8])
     for i in range(moves):
         # Execute a random legal move
         puzzle = puzzle.result(random.sample(puzzle.legalMoves(), 1)[0])
     return puzzle
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     puzzle = createRandomEightPuzzle(25)
-    print('A random puzzle:')
+    print("A random puzzle:")
     print(puzzle)
 
     problem = EightPuzzleSearchProblem(puzzle)
     path = search.breadthFirstSearch(problem)
-    print('BFS found a path of %d moves: %s' % (len(path), str(path)))
+    print("BFS found a path of %d moves: %s" % (len(path), str(path)))
     curr = puzzle
     i = 1
     for a in path:
         curr = curr.result(a)
-        print('After %d move%s: %s' % (i, ("", "s")[i>1], a))
+        print("After %d move%s: %s" % (i, ("", "s")[i > 1], a))
         print(curr)
 
-        raw_input("Press return for the next state...")   # wait for key stroke
+        raw_input("Press return for the next state...")  # wait for key stroke
         i += 1
