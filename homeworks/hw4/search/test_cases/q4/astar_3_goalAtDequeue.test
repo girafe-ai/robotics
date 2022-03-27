@@ -26,4 +26,3 @@ C 0:C->G G 1.0
 """
 # We only care about the solution, not the expansion order.
 exactExpansionOrder: "False"
-
