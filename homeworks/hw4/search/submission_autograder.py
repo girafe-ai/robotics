@@ -23,14 +23,14 @@ CS 188 Local Submission Autograder
 Written by the CS 188 Staff
 
 ==============================================================================
-   _____ _              _ 
+   _____ _              _
   / ____| |            | |
  | (___ | |_ ___  _ __ | |
   \___ \| __/ _ \| '_ \| |
   ____) | || (_) | |_) |_|
  |_____/ \__\___/| .__/(_)
-                 | |      
-                 |_|      
+                 | |
+                 |_|
 
 Modifying or tampering with this file is a violation of course policy.
 If you're having trouble running the autograder, please contact the staff.

@@ -8,11 +8,11 @@ diagram: """
  |         10          |
  \---------------------/
 
-A is the start state, G is the goal.  Arrows mark possible state 
+A is the start state, G is the goal.  Arrows mark possible state
 transitions.  The number next to the arrow is the cost of that transition.
 
-If you fail this test case, you may be incorrectly testing if a node is a goal 
-before adding it into the queue, instead of testing when you remove the node 
+If you fail this test case, you may be incorrectly testing if a node is a goal
+before adding it into the queue, instead of testing when you remove the node
 from the queue.  See the algorithm pseudocode in lecture.
 """
 

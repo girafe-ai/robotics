@@ -10,16 +10,16 @@ diagram: """
    V  /        V  /
     B2          E2
 
-A is the start state, G is the goal.  Arrows mark 
+A is the start state, G is the goal.  Arrows mark
 possible state transitions.  This graph has multiple
-paths to the goal, where nodes with the same state 
+paths to the goal, where nodes with the same state
 are added to the fringe multiple times before they
 are expanded.
 """
 # The following section specifies the search problem and the solution.
 # The graph is specified by first the set of start states, followed by
 # the set of goal states, and lastly by the state transitions which are
-# of the form: 
+# of the form:
 #      <start state> <actions> <end state> <cost>
 graph: """
 start_state: A

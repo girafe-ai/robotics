@@ -2,7 +2,7 @@
 class: "PacmanSearchTest"
 algorithm: "depthFirstSearch"
 
-# The following specifies the layout to be used 
+# The following specifies the layout to be used
 layoutName: "mediumMaze"
 layout: """
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

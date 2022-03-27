@@ -17,7 +17,7 @@ mark possible transitions
 # The following section specifies the search problem and the solution.
 # The graph is specified by first the set of start states, followed by
 # the set of goal states, and lastly by the state transitions which are
-# of the form: 
+# of the form:
 #      <start state> <actions> <end state> <cost>
 graph: """
 start_state: A

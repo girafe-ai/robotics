@@ -1,6 +1,6 @@
 # Homework 5
 
-In this homework assignment you are going to implement an algorithm for 
+In this homework assignment you are going to implement an algorithm for
 trajectory calculation for a self-driving car in a parking lot.
 
 **Note:** Python 3.6 and higher with TKinter is required. Install sympy
@@ -12,11 +12,11 @@ for computing collisions.
 ## Task editor
 
 The homework directory contains a single file `task1_tkinter_sympy.py`
-which contains TKinter code for designing planning tasks to test your planner. 
+which contains TKinter code for designing planning tasks to test your planner.
 
 Purple rectangle is the initial position of your car. Green rectangle is
 the target position. Black rectangles (created by clicking on NEW button)
-are obstacles that should be avoided. All rectangles can be moved by 
+are obstacles that should be avoided. All rectangles can be moved by
 means of left mouse button and rotated by means of right mouse button.
 It is assumed that rectangles don't intersect (strange things happen
 if you drag-and-drop one onto another, try to avoid it).
@@ -30,7 +30,7 @@ where the car heads.
 
 The Go button should run execute your algorithm for constructing a path connecting
 purple rectangle to green rectangle. The path should respect their orientation,
-avoid obstacles and be reasonably short and smooth. 
+avoid obstacles and be reasonably short and smooth.
 A path is a sequence of points (positions), it should be
 drawn on the canvas at the end of the GO callback. You can put your code in
 the same file. You may use any of the algorithms we discussed in lectures.
@@ -56,4 +56,4 @@ to make your work special:
 
 
 
- 
+

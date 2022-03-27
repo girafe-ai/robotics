@@ -5,12 +5,12 @@ diagram: """
      2     3     2
   S --- A --- C ---> G
   | \       /       ^
-3 |  \ 5   / 1     / 
-  |   \   /       / 
+3 |  \ 5   / 1     /
+  |   \   /       /
   B --- D -------/
-     4         5  
+     4         5
 
-S is the start state, G is the goal.  Arrows mark possible state 
+S is the start state, G is the goal.  Arrows mark possible state
 transitions.  The number next to the arrow is the cost of that transition.
 
 The heuristic value of each state is:
@@ -24,7 +24,7 @@ The heuristic value of each state is:
 # The following section specifies the search problem and the solution.
 # The graph is specified by first the set of start states, followed by
 # the set of goal states, and lastly by the state transitions which are
-# of the form: 
+# of the form:
 #      <start state> <actions> <end state> <cost>
 graph: """
 start_state: S

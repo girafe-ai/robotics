@@ -1,7 +1,7 @@
 class: "CornerHeuristicSanity"
 points: "1"
 
-# The following specifies the layout to be used 
+# The following specifies the layout to be used
 layout: """
 %%%%%%%%
 %.%   .%

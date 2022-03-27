@@ -1,6 +1,6 @@
 class: "CornerHeuristicPacman"
 
-# The following specifies the layout to be used 
+# The following specifies the layout to be used
 layout: """
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %.      % % %              %.%
