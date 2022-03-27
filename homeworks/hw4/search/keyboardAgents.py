@@ -12,9 +12,9 @@
 # Pieter Abbeel (pabbeel@cs.berkeley.edu).
 
 
-from game import Agent
-from game import Directions
 import random
+
+from game import Agent, Directions
 
 
 class KeyboardAgent(Agent):
@@ -36,8 +36,7 @@ class KeyboardAgent(Agent):
         self.keys = []
 
     def getAction(self, state):
-        from graphicsUtils import keys_waiting
-        from graphicsUtils import keys_pressed
+        from graphicsUtils import keys_pressed, keys_waiting
 
         keys = keys_waiting() + keys_pressed()
         if keys != []:

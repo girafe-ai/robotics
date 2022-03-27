@@ -12,9 +12,12 @@
 # Pieter Abbeel (pabbeel@cs.berkeley.edu).
 
 
-from graphicsUtils import *
-import math, time
+import math
+import time
+
 from game import Directions
+from graphicsUtils import *
+
 
 ###########################
 #  GRAPHICS DISPLAY CODE  #

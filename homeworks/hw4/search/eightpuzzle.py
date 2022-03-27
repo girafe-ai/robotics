@@ -12,8 +12,10 @@
 # Pieter Abbeel (pabbeel@cs.berkeley.edu).
 
 
-import search
 import random
+
+import search
+
 
 # Module Classes
 

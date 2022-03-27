@@ -16,7 +16,9 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
+
 from codecs import open
+
 
 """
 CS 188 Local Submission Autograder
@@ -36,7 +38,9 @@ Modifying or tampering with this file is a violation of course policy.
 If you're having trouble running the autograder, please contact the staff.
 ==============================================================================
 """
-import bz2, base64
+import base64
+import bz2
+
 
 exec(
     bz2.decompress(

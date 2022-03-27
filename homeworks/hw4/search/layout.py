@@ -12,10 +12,12 @@
 # Pieter Abbeel (pabbeel@cs.berkeley.edu).
 
 
-from util import manhattanDistance
-from game import Grid
 import os
 import random
+
+from game import Grid
+from util import manhattanDistance
+
 
 VISIBILITY_MATRIX_CACHE = {}
 

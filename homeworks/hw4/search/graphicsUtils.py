@@ -12,14 +12,16 @@
 # Pieter Abbeel (pabbeel@cs.berkeley.edu).
 
 
-import sys
 import math
+import os.path
 import random
 import string
+import sys
 import time
 import types
+
 import Tkinter
-import os.path
+
 
 _Windows = sys.platform == "win32"  # True if on Win95/98/NT
 

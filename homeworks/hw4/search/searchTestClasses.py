@@ -13,13 +13,14 @@
 
 
 import re
-import testClasses
 import textwrap
 
 # import project specific code
 import layout
 import pacman
+import testClasses
 from search import SearchProblem
+
 
 # helper function for printing solutions in solution files
 def wrap_solution(solution):

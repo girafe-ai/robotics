@@ -1,5 +1,6 @@
-from tkinter import *
 import math
+from tkinter import *
+
 
 """=================Yours Methods================="""
 

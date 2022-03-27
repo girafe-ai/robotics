@@ -1,6 +1,8 @@
-from tkinter import *
 import math
+from tkinter import *
+
 from sympy import Point, Polygon
+
 
 """================= Your classes and methods ================="""
 
