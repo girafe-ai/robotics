@@ -69,26 +69,29 @@ MacOS, not free).
 
 Then create and launch Ubuntu instance.
 
-Follow
-[installation guide for ROS on Ubuntu](http://wiki.ros.org/noetic/Installation/Ubuntu)
-(you need to install `ros-noetic-desktop-full`)
+Then follow regular installation on Ubuntu host (see [Host section](#host))
 
 ## Cloud virtual machine with GUI
 
 [Follow instructions](https://dev.to/easyawslearn/how-to-setup-gui-on-amazon-ec2-ubuntu-server-4mgn)
 for AWS.
 
-Then follw steps from section "Virtual machine" above
+Then follow regular installation on Ubuntu host (see [Host section](#host))
 
 This is tested only once on Windows (RDP is available for MacSO tooo). If you
 prefer that way - please report your experience.
 
 ## Host
 
-Not recommended.
+Follow
+[installation guide for ROS on Ubuntu](http://wiki.ros.org/noetic/Installation/Ubuntu)
+(you need to install `ros-noetic-desktop-full`)
+
+This option is not recommended.
 
 Really available only for Linux machines. Warning - it may influence your
-machine behaviour, so do that if you know what you do.
+machine behaviour, so do that if you know what you do or you are on virtual
+machine.
 
 ## Gratitude and reference
 
