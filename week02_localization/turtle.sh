@@ -10,7 +10,7 @@ docker run -it --rm --privileged --net=host -e DISPLAY=$IP:0 -v /tmp/.X11-unix:/
 
 # 2. For MacOS
 docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix osrf/ros:noetic-desktop-full
-
+export LIBGL_ALWAYS_INDIRECT=1 # to enable rendering on host machine, not virtual
 
 # setup ROS environment for particular shell
 env | grep ROS  # <empty output>
